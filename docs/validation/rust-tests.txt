@@ -1,0 +1,85 @@
+   Compiling calendar-storage v0.1.0 (<repository>/crates/calendar-storage)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.05s
+     Running unittests src/lib.rs (target/debug/deps/calendar_core-b834b184babf5d14)
+
+running 8 tests
+test tests::hide_keeps_time_and_deduplicates ... ok
+test regression_tests::duration_is_honored ... ok
+test tests::identities_are_namespaced ... ok
+test regression_tests::explicit_disabled_reminders_only_emit_start ... ok
+test tests::invalid_feed_rejected ... ok
+test tests::dst_recurrence ... ok
+test regression_tests::all_day_recurrence_keeps_exclusive_end_across_dst ... ok
+test regression_tests::cancellation_and_moved_occurrence ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/calendar_providers-a09c61ea6a4306e2)
+
+running 7 tests
+test caldav::tests::href_escaping ... ok
+test caldav::tests::cross_origin_discovery_refused ... ok
+test tests::cancellation_is_shared ... ok
+test google::tests::dates_are_real_dates ... ok
+test google::tests::scopes_are_readonly ... ok
+test caldav::tests::tombstones ... ok
+test tests::rejects_insecure_endpoints ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/calendar_storage-ef883fc1efcabf72)
+
+running 21 tests
+test crypto::tests::crash_child_helper ... ok
+test crypto::tests::cipher_integrity_check_succeeds ... ok
+2026-10-29 15:22:17.806: ERROR CORE sqlcipher_page_cipher: hmac check failed for pgno=1
+2026-10-29 15:22:17.806: ERROR CORE sqlite3Codec: error decrypting page 1 data: 1
+2026-10-29 15:22:17.806: ERROR CORE sqlcipher_codec_ctx_set_error: 1 lock=0
+test crypto::tests::corruption_is_detected ... ok
+test crypto::tests::encrypted_reopen ... ok
+test crypto::tests::abrupt_process_exit_preserves_committed_wal ... ok
+2026-10-29 15:22:17.818: ERROR CORE sqlcipher_page_cipher: hmac check failed for pgno=1
+2026-10-29 15:22:17.818: ERROR CORE sqlite3Codec: error decrypting page 1 data: 1
+2026-10-29 15:22:17.818: ERROR CORE sqlcipher_codec_ctx_set_error: 1 lock=0
+test crypto::tests::locked_vault_rejects_access ... ok
+test crypto::tests::no_key_rejected ... ok
+test crypto::tests::encrypted_search_index ... ok
+2026-10-29 15:22:17.827: ERROR CORE sqlcipher_page_cipher: hmac check failed for pgno=1
+2026-10-29 15:22:17.827: ERROR CORE sqlite3Codec: error decrypting page 1 data: 1
+2026-10-29 15:22:17.827: ERROR CORE sqlcipher_codec_ctx_set_error: 1 lock=0
+test crypto::tests::plaintext_database_rejected ... ok
+test crypto::tests::encrypted_backup_restores_with_independent_key ... ok
+test crypto::tests::temporary_store_and_memory_security ... ok
+test crypto::tests::wal_and_database_hide_canary ... ok
+2026-10-29 15:22:17.837: ERROR CORE sqlcipher_page_cipher: hmac check failed for pgno=1
+2026-10-29 15:22:17.837: ERROR CORE sqlite3Codec: error decrypting page 1 data: 1
+2026-10-29 15:22:17.837: ERROR CORE sqlcipher_codec_ctx_set_error: 1 lock=0
+test crypto::tests::wrong_key_rejected ... ok
+test crypto::tests::uncommitted_changes_do_not_survive_reopen ... ok
+test crypto::tests::changed_envelope_rejected ... ok
+test crypto::tests::envelope_roundtrip_and_serialization ... ok
+test crypto::tests::wrong_passphrase_rejected ... ok
+test tests::receipts_survive_restart ... ok
+test tests::repository_roundtrip_and_wrapped_secrets ... ok
+test crypto::tests::passphrase_change_preserves_database ... ok
+test tests::backup_and_passphrase_change ... ok
+
+test result: ok. 21 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 18.53s
+
+   Doc-tests calendar_core
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests calendar_providers
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests calendar_storage
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s

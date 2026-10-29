@@ -1,0 +1,25 @@
+[package]
+name = "read-only-calendar"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+build = "build.rs"
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+[dependencies]
+tauri = { version = "2", features = ["tray-icon"] }
+tauri-plugin-notification = "2"
+tauri-plugin-dialog = "2"
+tauri-plugin-opener = "2"
+calendar-core = { path = "../../../crates/calendar-core" }
+calendar-providers = { path = "../../../crates/calendar-providers" }
+calendar-storage = { path = "../../../crates/calendar-storage" }
+serde.workspace = true
+serde_json.workspace = true
+chrono.workspace = true
+zeroize.workspace = true
+uuid.workspace = true
+hex = "0.4"
+keyring = { version = "3.6", default-features = false, features = ["apple-native", "windows-native", "sync-secret-service", "crypto-rust", "vendored"] }
+[target.'cfg(windows)'.dependencies]
+windows-sys = { version = "0.59", features = ["Win32_System_StationsAndDesktops"] }

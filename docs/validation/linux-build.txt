@@ -1,0 +1,3 @@
+   Compiling read-only-calendar v0.1.0 (<repository>/apps/desktop/src-tauri)
+   Compiling calendar-storage v0.1.0 (<repository>/crates/calendar-storage)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 11.06s
