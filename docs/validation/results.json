@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-29",
+  "version": "0.1.0",
+  "rust_tests_passed": 36,
+  "ui_tests_passed": 9,
+  "rust_test_helper_included": true,
+  "linux_desktop_compiled_and_linked": true,
+  "frontend_production_build": true,
+  "production_npm_vulnerabilities_reported": 0,
+  "live_google_tested": false,
+  "live_proton_tested": false,
+  "live_rust_caldav_tested": false,
+  "native_notifications_and_keychains_tested": false,
+  "windows_macos_tested_locally": false,
+  "gui_smoke_test": "blocked by execution-environment Unix-socket restrictions",
+  "linux_development_binary_sha256": "bfd06e32c9976c813139acd5eb9e9b08352e5e2ecc2d0ecee2e26778a2113c5e"
+}

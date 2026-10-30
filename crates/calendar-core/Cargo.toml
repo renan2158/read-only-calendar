@@ -1,0 +1,15 @@
+[package]
+name = "calendar-core"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+[dependencies]
+serde.workspace = true
+serde_json.workspace = true
+chrono.workspace = true
+chrono-tz.workspace = true
+thiserror.workspace = true
+rrule = "0.14"
+ical = "0.11"
+sha2 = "0.10"
+hex = "0.4"

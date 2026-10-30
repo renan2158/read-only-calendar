@@ -1,0 +1,10 @@
+{
+  "identifier": "main",
+  "description": "Local calendar window; no filesystem, shell, HTTP or SQL access from the renderer.",
+  "windows": ["main"],
+  "permissions": [
+    "core:default",
+    "notification:allow-is-permission-granted",
+    "notification:allow-request-permission"
+  ]
+}

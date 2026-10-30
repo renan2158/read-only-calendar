@@ -1,0 +1,23 @@
+{
+  "name": "read-only-calendar-workspace",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/desktop"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace apps/desktop",
+    "build": "npm run build --workspace apps/desktop",
+    "test": "npm run test --workspace apps/desktop",
+    "desktop": "npm run tauri --workspace apps/desktop --",
+    "check": "npm run check --workspace apps/desktop",
+    "build:desktop": "node scripts/build-desktop.mjs",
+    "build:windows": "node scripts/build-desktop.mjs windows",
+    "build:macos": "node scripts/build-desktop.mjs macos",
+    "build:linux": "node scripts/build-desktop.mjs linux",
+    "test:build": "node --test scripts/build-desktop.test.mjs"
+  },
+  "devDependencies": {
+    "prettier": "^3.9.10"
+  }
+}
