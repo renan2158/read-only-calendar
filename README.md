@@ -36,6 +36,12 @@ npm run desktop -- build --no-bundle
 
 `npm run dev` alone opens the frontend development server; it cannot access real vault data without Tauri. No demo data or fake success state is used by the application.
 
+## Build executable files
+
+After `npm ci`, run **`npm run build:desktop`** to build release executables and installers for your current OS. Explicit aliases are `npm run build:windows`, `npm run build:macos`, and `npm run build:linux`; run each on its matching OS.
+
+The **Build installers** GitHub Actions workflow builds all platforms, including Intel and Apple Silicon macOS, and uploads downloadable installer artifacts. See [docs/BUILDING.md](docs/BUILDING.md) for commands, output paths, prerequisites, signing and downloading artifacts.
+
 ## Connect calendars
 
 **Google:** create a Google Cloud project, enable the Calendar API, configure the consent screen/test user, and download a **Desktop app** OAuth client JSON. Choose Google in Connect calendar and select that local file. Sign in through the system browser. Only calendar-list and event read scopes are requested. The distributed app currently uses this bring-your-own-client development flow; a maintainer-owned, verified OAuth client is a release prerequisite. Do not commit client files or tokens.
@@ -76,7 +82,7 @@ npm run build
 npm test
 ```
 
-CI runs the core/interface checks and a desktop build matrix for Linux, macOS, and Windows. A workflow definition is not evidence that those platforms have passed: inspect the actual run. Native notifications, OS keychain/session events, real Google consent and Proton feed updates need hands-on verification as documented.
+CI runs the core/interface checks and packages downloadable installers for Linux, macOS, and Windows. A workflow definition is not evidence that those platforms have passed: inspect the actual run. Native notifications, OS keychain/session events, real Google consent and Proton feed updates need hands-on verification as documented.
 
 ## License
 
